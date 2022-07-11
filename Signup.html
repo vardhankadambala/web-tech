@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sign up</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <script>
+            
+            function formvalidate() 
+     	    {
+             var fname = document.form.fname.value;
+             var lname= document.form.lname.value;
+             var phone= document.form.phone.value;
+             var age= document.form.age.value;
+             var birth= document.form.dob.value;
+             var email= document.form.email.value;
+             var pass= document.form.pass.value;
+             var repass= document.form.repass.value;
+             var yes=document.form.yes.value;
+             
+          if(fname==="" || lname==="" || phone==="" || age==="" || birth===""  || email==="" || pass==="" || repass==="" || yes=== notchecked)
+             {
+             	alert("fields are not filled");
+             	return false;
+             }
+         }
+        </script>
+    </head>
+    <body>
+    <center>
+        <h1>Sign up for Life Style free account</h1>
+        <form action="login.php" method="post" name="form">
+        First name   :<input type="text" placeholder="Enter your first name" name="fname"><br><br>
+    Last name    :<input type="text" placeholder="Enter your Last name" name="last name"><br><br>
+    
+    Phone number    :<input type="number" name="phone" value=""><br><br>
+    AGE             :<input type="number" name="age" min="10" max="100"><br><br>
+    Date Of Birth            :<input type="date" name="dob"><br><br>
+    Email ID        :<input type="text" placeholder="Enter your Email ID" name="email"><br><br>
+    Password        :<input type="text" placeholder="Enter your Password" name="pass"><br><br>
+    Retype Password :<input type="text" placeholder="Re-Enter your Password" name="repass"><br><br>
+    
+    <input type="checkbox" id="yes" name="yes" value="yes">
+    <label for="yes"> Will you accept <a href="#">terms and conditions</a></label><br><br>
+    <button type="submit" name='sibut' onclick="return formvalidate()">
+                    Sign up
+                </button>    
+            </form>    
+    </center>
+    </body>
+</html>

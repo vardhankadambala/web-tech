@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <script> 
+     	function formvalidate() 
+     	{
+             var email = document.form.email.value;
+             var pass= document.form.pass.value;
+             
+             
+           
+          if(email==="" || pass==="")
+             {
+             	alert("All fields are not filled");
+             	return false;
+             }
+         }
+             </script>
+    </head>
+    
+    <body>
+    <center>
+        <h1 style="font-weight: bolder " >Login into Life Style Account</h1>
+       
+        <form  action="login.php" method="post" name="form">
+            Enter your Email ID    :<input type="text" placeholder="Enter your Email ID" name="email"><br><br>
+            Enter your Password    :<input type="text" placeholder="Enter your Password" name="pass"><br><br>
+            <button type="submit" name="logbut" onclick="return formvalidate()" >
+                    Login
+            </button>    
+            </form> 
+    
+        <h3>If you are new <a href="signup.html">click here</a> to register</h3>
+    </center>
+       
+    </body>
+</html>
